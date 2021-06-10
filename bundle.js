@@ -1,8 +1,14 @@
 (function (React, ReactDOM, d3) {
-  'use strict';
+  "use strict";
 
-  React = React && Object.prototype.hasOwnProperty.call(React, 'default') ? React['default'] : React;
-  ReactDOM = ReactDOM && Object.prototype.hasOwnProperty.call(ReactDOM, 'default') ? ReactDOM['default'] : ReactDOM;
+  React =
+    React && Object.prototype.hasOwnProperty.call(React, "default")
+      ? React["default"]
+      : React;
+  ReactDOM =
+    ReactDOM && Object.prototype.hasOwnProperty.call(ReactDOM, "default")
+      ? ReactDOM["default"]
+      : ReactDOM;
 
   const height = 500;
   const width = 960;
@@ -26,24 +32,35 @@
   });
 
   const App = () => {
-    return (
-      React.createElement( 'svg', { width: width, height: height },
-        React.createElement( 'g', { transform: `translate(${centerX}, ${centerY})` },
-          React.createElement( 'circle', {
-            r: r, fill: "yellow", stroke: "black", 'stroke-width': strokeWidth }),
-          React.createElement( 'circle', {
-            cx: -eyeOffsetX, cy: -eyeOffsetY, r: eyeRadius }),
-          React.createElement( 'circle', {
-            cx: eyeOffsetX, cy: -eyeOffsetY, r: eyeRadius }),
-          React.createElement( 'path', { d: mouthArc })
-        )
+    return React.createElement(
+      "svg",
+      { width: width, height: height },
+      React.createElement(
+        "g",
+        { transform: `translate(${centerX}, ${centerY})` },
+        React.createElement("circle", {
+          r: r,
+          fill: "yellow",
+          stroke: "black",
+          "stroke-width": strokeWidth,
+        }),
+        React.createElement("circle", {
+          cx: -eyeOffsetX,
+          cy: -eyeOffsetY,
+          r: eyeRadius,
+        }),
+        React.createElement("circle", {
+          cx: eyeOffsetX,
+          cy: -eyeOffsetY,
+          r: eyeRadius,
+        }),
+        React.createElement("path", { d: mouthArc })
       )
     );
   };
 
-  const rootElement = document.getElementById('root');
-  ReactDOM.render(React.createElement( App, null ), rootElement);
-
-}(React, ReactDOM, d3));
+  const rootElement = document.getElementById("root");
+  ReactDOM.render(React.createElement(App, null), rootElement);
+})(React, ReactDOM, d3);
 
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgUmVhY3RET00gZnJvbSAncmVhY3QtZG9tJztcbmltcG9ydCB7IGFyYyB9IGZyb20gJ2QzJztcblxuY29uc3QgaGVpZ2h0ID0gNTAwO1xuY29uc3Qgd2lkdGggPSA5NjA7XG5jb25zdCBjZW50ZXJYID0gd2lkdGggLyAyO1xuY29uc3QgY2VudGVyWSA9IGhlaWdodCAvIDI7XG5jb25zdCBzdHJva2VXaWR0aCA9IDIwO1xuY29uc3QgZXllT2Zmc2V0WCA9IDgwO1xuY29uc3QgZXllT2Zmc2V0WSA9IDkwO1xuY29uc3QgZXllUmFkaXVzID0gNDA7XG5jb25zdCByID0gY2VudGVyWSAtIHN0cm9rZVdpZHRoIC8gMjtcbmNvbnN0IG1vdXRoV2lkdGggPSAyMDtcbmNvbnN0IG1vdXRoUmFkaXVzID0gMTQwO1xuXG5jb25zdCBhcmNJbnN0YW5jZSA9IGFyYygpO1xuXG5jb25zdCBtb3V0aEFyYyA9IGFyY0luc3RhbmNlKHtcbiAgaW5uZXJSYWRpdXM6IG1vdXRoUmFkaXVzLFxuICBvdXRlclJhZGl1czogbW91dGhSYWRpdXMgKyBtb3V0aFdpZHRoLFxuICBzdGFydEFuZ2xlOiAoTWF0aC5QSSAqIDkpIC8gMTYsXG4gIGVuZEFuZ2xlOiAoTWF0aC5QSSAqIDIzKSAvIDE2LFxufSk7XG5cbmNvbnN0IEFwcCA9ICgpID0+IHtcbiAgcmV0dXJuIChcbiAgICA8c3ZnIHdpZHRoPXt3aWR0aH0gaGVpZ2h0PXtoZWlnaHR9PlxuICAgICAgPGcgdHJhbnNmb3JtPXtgdHJhbnNsYXRlKCR7Y2VudGVyWH0sICR7Y2VudGVyWX0pYH0+XG4gICAgICAgIDxjaXJjbGVcbiAgICAgICAgICByPXtyfVxuICAgICAgICAgIGZpbGw9XCJ5ZWxsb3dcIlxuICAgICAgICAgIHN0cm9rZT1cImJsYWNrXCJcbiAgICAgICAgICBzdHJva2Utd2lkdGg9e3N0cm9rZVdpZHRofVxuICAgICAgICAvPlxuICAgICAgICA8Y2lyY2xlXG4gICAgICAgICAgY3g9ey1leWVPZmZzZXRYfVxuICAgICAgICAgIGN5PXstZXllT2Zmc2V0WX1cbiAgICAgICAgICByPXtleWVSYWRpdXN9XG4gICAgICAgIC8+XG4gICAgICAgIDxjaXJjbGVcbiAgICAgICAgICBjeD17ZXllT2Zmc2V0WH1cbiAgICAgICAgICBjeT17LWV5ZU9mZnNldFl9XG4gICAgICAgICAgcj17ZXllUmFkaXVzfVxuICAgICAgICAvPlxuICAgICAgICA8cGF0aCBkPXttb3V0aEFyY30gLz5cbiAgICAgIDwvZz5cbiAgICA8L3N2Zz5cbiAgKTtcbn07XG5cbmNvbnN0IHJvb3RFbGVtZW50ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKTtcblJlYWN0RE9NLnJlbmRlcig8QXBwIC8+LCByb290RWxlbWVudCk7XG4iXSwibmFtZXMiOlsiYXJjIl0sIm1hcHBpbmdzIjoiOzs7Ozs7RUFJQSxNQUFNLE1BQU0sR0FBRyxHQUFHLENBQUM7RUFDbkIsTUFBTSxLQUFLLEdBQUcsR0FBRyxDQUFDO0VBQ2xCLE1BQU0sT0FBTyxHQUFHLEtBQUssR0FBRyxDQUFDLENBQUM7RUFDMUIsTUFBTSxPQUFPLEdBQUcsTUFBTSxHQUFHLENBQUMsQ0FBQztFQUMzQixNQUFNLFdBQVcsR0FBRyxFQUFFLENBQUM7RUFDdkIsTUFBTSxVQUFVLEdBQUcsRUFBRSxDQUFDO0VBQ3RCLE1BQU0sVUFBVSxHQUFHLEVBQUUsQ0FBQztFQUN0QixNQUFNLFNBQVMsR0FBRyxFQUFFLENBQUM7RUFDckIsTUFBTSxDQUFDLEdBQUcsT0FBTyxHQUFHLFdBQVcsR0FBRyxDQUFDLENBQUM7RUFDcEMsTUFBTSxVQUFVLEdBQUcsRUFBRSxDQUFDO0VBQ3RCLE1BQU0sV0FBVyxHQUFHLEdBQUcsQ0FBQztBQUN4QjtFQUNBLE1BQU0sV0FBVyxHQUFHQSxNQUFHLEVBQUUsQ0FBQztBQUMxQjtFQUNBLE1BQU0sUUFBUSxHQUFHLFdBQVcsQ0FBQztFQUM3QixFQUFFLFdBQVcsRUFBRSxXQUFXO0VBQzFCLEVBQUUsV0FBVyxFQUFFLFdBQVcsR0FBRyxVQUFVO0VBQ3ZDLEVBQUUsVUFBVSxFQUFFLENBQUMsSUFBSSxDQUFDLEVBQUUsR0FBRyxDQUFDLElBQUksRUFBRTtFQUNoQyxFQUFFLFFBQVEsRUFBRSxDQUFDLElBQUksQ0FBQyxFQUFFLEdBQUcsRUFBRSxJQUFJLEVBQUU7RUFDL0IsQ0FBQyxDQUFDLENBQUM7QUFDSDtFQUNBLE1BQU0sR0FBRyxHQUFHLE1BQU07RUFDbEIsRUFBRTtFQUNGLElBQUksOEJBQUssT0FBTyxLQUFNLEVBQUMsUUFBUTtFQUMvQixNQUFNLDRCQUFHLFdBQVcsQ0FBQyxVQUFVLEVBQUUsT0FBTyxDQUFDLEVBQUUsRUFBRSxPQUFPLENBQUMsQ0FBQztFQUN0RCxRQUFRO0VBQ1IsVUFBVSxHQUFHLENBQUUsRUFDTCxNQUFLLFFBQVEsRUFDYixRQUFPLE9BQU8sRUFDZCxnQkFBYyxhQUFZO0VBRXBDLFFBQVE7RUFDUixVQUFVLElBQUksQ0FBQyxVQUFXLEVBQ2hCLElBQUksQ0FBQyxVQUFXLEVBQ2hCLEdBQUcsV0FBVTtFQUV2QixRQUFRO0VBQ1IsVUFBVSxJQUFJLFVBQVcsRUFDZixJQUFJLENBQUMsVUFBVyxFQUNoQixHQUFHLFdBQVU7RUFFdkIsUUFBUSwrQkFBTSxHQUFHLFVBQVMsQ0FBRztFQUM3QixPQUFVO0VBQ1YsS0FBVTtFQUNWLElBQUk7RUFDSixDQUFDLENBQUM7QUFDRjtFQUNBLE1BQU0sV0FBVyxHQUFHLFFBQVEsQ0FBQyxjQUFjLENBQUMsTUFBTSxDQUFDLENBQUM7RUFDcEQsUUFBUSxDQUFDLE1BQU0sQ0FBQyxxQkFBQyxTQUFHLEVBQUcsRUFBRSxXQUFXLENBQUM7Ozs7In0=
