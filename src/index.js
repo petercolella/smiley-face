@@ -1,20 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { range } from "d3";
 import Face from "./Face";
 
+const array = range(24);
+
 const App = () => {
-  return (
+  return array.map((_, i) => (
     <Face
-      height={500}
-      width={960}
-      eyeOffsetX={80}
-      eyeOffsetY={90}
-      eyeRadius={40}
-      mouthRadius={140}
-      mouthWidth={20}
-      strokeWidth={20}
+      key={i}
+      height={150}
+      width={150}
+      eyeOffsetX={24}
+      eyeOffsetY={27}
+      eyeRadius={12}
+      mouthRadius={42}
+      mouthWidth={6}
+      strokeWidth={6}
     />
-  );
+  ));
 };
 
 const rootElement = document.getElementById("root");
